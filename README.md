@@ -9,7 +9,7 @@ Each HUID is composed of:
 
 This gives compact numeric IDs that can be sorted by creation time and stored efficiently in databases.
 
-## 1. Installation
+## Installation
 
 From [npm](https://www.npmjs.com/package/@howionlabs/huid) via one of:
 
@@ -20,9 +20,9 @@ yarn add @howionlabs/huid
 pnpm add @howionlabs/huid
 ```
 
-## 2. Core Functionality
+## Core Functionality
 
-### 2.1. Generation
+### Generation
 
 ```ts
 import { huid } from '@howionlabs/huid'
@@ -32,7 +32,7 @@ const id = huid() // 15734368260819637n
 
 `huid()` returns a new 63-bit non-negative `bigint`.
 
-### 2.2. Decoding
+### Decoding
 
 ```ts
 import { huid, huidDecodeRandom, huidDecodeTime } from '@howionlabs/huid'
@@ -42,7 +42,7 @@ const createdAt = huidDecodeTime(id) // Date
 const randomPart = huidDecodeRandom(id) // bigint in [0, 2^21 - 1]
 ```
 
-### 2.3. Successor and Predecessor
+### Successor and Predecessor
 
 ```ts
 import { huidPred, huidSucc } from '@howionlabs/huid'
@@ -53,7 +53,7 @@ const prev = huidPred(100n) // 99n
 
 These helpers are useful for range boundaries and cursor style pagination.
 
-### 2.4. Conversion to Binary Formats
+### Conversion to Binary Formats
 
 ```ts
 import { huidFromBuffer, huidToBuffer } from '@howionlabs/huid'
@@ -68,7 +68,7 @@ Equivalent APIs exist for `Uint8Array`:
 - `huidToByteArray(id)`
 - `huidFromByteArray(arr)`
 
-### 2.5. Validation
+### Validation
 
 ```ts
 import { huidValidator } from '@howionlabs/huid'
