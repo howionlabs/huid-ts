@@ -135,7 +135,7 @@ The library throws `HUIDError` with one of these codes in `error.name`:
 - Maximum representable HUID is `2^63 - 1`.
 - HUID values are always non-negative and fit into 8 bytes.
 
-## Drizzle example
+## Drizzle Example
 
 ```ts
 import * as p from 'drizzle-orm/pg-core'
