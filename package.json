@@ -44,6 +44,9 @@
         "LICENSE"
     ],
     "license": "MIT",
+    "publishConfig": {
+        "access": "public"
+    },
     "sideEffects": false,
     "version": "0.9.0",
     "type": "module"
