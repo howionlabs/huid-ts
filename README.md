@@ -27,7 +27,7 @@ pnpm add @howionlabs/huid
 ```ts
 import { huid } from '@howionlabs/huid'
 
-const id = huid() // 1494961835569231n
+const id = huid() // 15734368260819637n
 ```
 
 `huid()` returns a new 63-bit non-negative `bigint`.
