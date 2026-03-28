@@ -1,0 +1,50 @@
+{
+    "name": "@howionlabs/huid",
+    "description": "Howion's unique identifier module for the next era",
+    "private": false,
+    "author": {
+        "email": "howionwastaken@gmail.com",
+        "name": "howion",
+        "url": "https://github.com/howion"
+    },
+    "keywords": [],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/howionlabs/huid-ts.git"
+    },
+    "devDependencies": {
+        "@biomejs/biome": "^2.4.9",
+        "@types/bun": "latest",
+        "@types/node": "latest",
+        "vitest": "^4.1.2"
+    },
+    "peerDependencies": {
+        "typescript": "^5"
+    },
+    "scripts": {
+        "build": "bun run format && bun run test && rm -rf ./dist && bun build ./src/index.ts --outdir=./dist --target=node --format=esm --minify --sourcemap=linked && bunx dts-bundle-generator src/index.ts -o dist/index.d.ts",
+        "prepack": "bun run build",
+        "format": "biome format --write .",
+        "lint": "biome lint .",
+        "test": "bunx vitest run",
+        "test:watch": "bunx vitest"
+    },
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.js",
+            "default": "./dist/index.js"
+        }
+    },
+    "files": [
+        "dist",
+        "README.md",
+        "LICENSE"
+    ],
+    "license": "MIT",
+    "sideEffects": false,
+    "version": "0.9.0",
+    "type": "module"
+}
