@@ -11,7 +11,7 @@ This gives compact numeric IDs that can be sorted by creation time and stored ef
 
 ## 1. Installation
 
-From [npm](https://howion.com/) via one of:
+From [npm](https://www.npmjs.com/package/@howionlabs/huid) via one of:
 
 ```bash
 npm install @howionlabs/huid
