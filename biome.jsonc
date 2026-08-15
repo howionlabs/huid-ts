@@ -1,97 +1,146 @@
 {
-    "$schema": "https://biomejs.dev/schemas/2.4.9/schema.json",
-    "vcs": {
-        "enabled": false,
-        "clientKind": "git",
-        "useIgnoreFile": true
+    "$schema": "https://biomejs.dev/schemas/2.5.8/schema.json",
+    "assist": {
+        "actions": {
+            "preset": "recommended",
+            "recommended": true,
+            "source": {
+                "useSortedInterfaceMembers": "off",
+                "useSortedKeys": "off",
+                "useSortedPackageJson": "off",
+                "organizeImports": {
+                    "level": "on",
+                    "options": {
+                        "identifierOrder": "natural",
+                        "groups": [
+                            {
+                                "type": true
+                            },
+                            ":URL:",
+                            ":BUN:",
+                            ":PACKAGE_WITH_PROTOCOL:",
+                            ":NODE:",
+                            ":PACKAGE:",
+                            ":PATH:",
+                            ":STYLE:"
+                        ]
+                    }
+                }
+            }
+        },
+        "enabled": true
     },
+    "css": {},
+    "extends": [],
     "files": {
         "ignoreUnknown": true,
         "includes": [
-            "**/*.ts",
-            "**/*.tsx",
-            "**/*.js",
-            "**/*.jsx",
-            "**/*.json",
-            "**/*.jsonc",
-            "**/*.html",
-            "**/*.astro",
-            "!.astro",
-            "!.next",
-            "!.git",
-            "!dist",
-            "!public",
-            "!build",
-            "!out",
-            "!node_modules"
-        ]
+            "**",
+            "!biome.jsonc",
+            "!package.json",
+            "!!static",
+            "!!public",
+            "!!dist",
+            "!!out"
+        ],
+        "maxSize": 1000000
     },
     "formatter": {
+        "attributePosition": "auto",
+        "bracketSameLine": false,
+        "bracketSpacing": true,
+        "delimiterSpacing": false,
         "enabled": true,
-        "useEditorconfig": true,
-        "lineWidth": 120
+        "expand": "auto",
+        "formatWithErrors": true,
+        "lineWidth": 100,
+        "indentStyle": "space",
+        "indentWidth": 4,
+        "lineEnding": "lf",
+        "trailingNewline": true,
+        "useEditorconfig": false
+    },
+    "graphql": {},
+    "grit": {},
+    "html": {
+        "experimentalFullSupportEnabled": true
+    },
+    "javascript": {
+        "formatter": {
+            "arrowParentheses": "asNeeded",
+            "attributePosition": "auto",
+            "bracketSameLine": false,
+            "bracketSpacing": true,
+            "enabled": true,
+            "expand": "auto",
+            "indentStyle": "space",
+            "jsxQuoteStyle": "double",
+            "quoteProperties": "asNeeded",
+            "quoteStyle": "single",
+            "semicolons": "asNeeded",
+            "trailingCommas": "none"
+        },
+        "parser": {
+            "jsxEverywhere": false
+        },
+        "resolver": {}
+    },
+    "json": {
+        "assist": {},
+        "formatter": {},
+        "linter": {},
+        "parser": {}
     },
     "linter": {
         "enabled": true,
         "rules": {
-            "recommended": true,
+            "preset": "recommended",
             "a11y": {
-                "useValidAriaRole": "off",
-                "noSvgWithoutTitle": "off",
-                "noStaticElementInteractions": "off",
-                "useKeyWithClickEvents": "off"
-            },
-            "correctness": {
-                "noUnknownTypeSelector": "off"
-            },
-            "suspicious": {
-                "noExplicitAny": "off",
-                "noEmptyInterface": "off"
+                "useValidAriaRole": "info",
+                "noSvgWithoutTitle": "info",
+                "noStaticElementInteractions": "info",
+                "useKeyWithClickEvents": "info"
             },
             "style": {
+                "noDefaultExport": "off",
                 "noNonNullAssertion": "off"
-            }
-        }
-    },
-    "javascript": {
-        "formatter": {
-            "enabled": true,
-            "quoteStyle": "single",
-            "semicolons": "asNeeded",
-            "jsxQuoteStyle": "double",
-            "trailingCommas": "none",
-            "arrowParentheses": "always",
-            "attributePosition": "auto",
-            "bracketSameLine": false,
-            "bracketSpacing": true,
-            "indentStyle": "space",
-            "expand": "auto",
-            "quoteProperties": "asNeeded"
-        }
-    },
-    "assist": {
-        "enabled": true,
-        "actions": {
-            "source": {
-                "organizeImports": "off"
+            },
+            "suspicious": {
+                "noExplicitAny": "info",
+                "noEmptyInterface": "info"
+            },
+            "nursery": {
+                "noFloatingPromises": "warn"
             }
         }
     },
     "overrides": [
         {
-            "includes": ["**/*.svelte", "**/*.astro", "**/*.vue"],
+            "includes": [
+                "**/*.svelte",
+                "**/*.astro",
+                "**/*.vue"
+            ],
             "linter": {
                 "rules": {
-                    "style": {
-                        "useConst": "off",
-                        "useImportType": "off"
-                    },
-                    "correctness": {
-                        "noUnusedVariables": "off",
-                        "noUnusedImports": "off"
-                    }
+                    "a11y": {},
+                    "complexity": {},
+                    "correctness": {},
+                    "nursery": {},
+                    "performance": {},
+                    "preset": "recommended",
+                    "style": {},
+                    "security": {},
+                    "suspicious": {}
                 }
             }
         }
-    ]
+    ],
+    "plugins": [],
+    "root": false,
+    "vcs": {
+        "clientKind": "git",
+        "enabled": true,
+        "useIgnoreFile": false
+    }
 }

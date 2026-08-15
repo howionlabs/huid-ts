@@ -1,0 +1,66 @@
+{
+    "editor.codeActionsOnSave": {
+        "source.fixAll.biome": "explicit",
+        "source.organizeImports.biome": "explicit"
+    },
+    "editor.defaultFormatter": "biomejs.biome",
+    "js/ts.experimental.useTsgo": true,
+    "js/ts.tsdk.path": "./node_modules/typescript",
+    "search.exclude": {
+        "**/routeTree.gen.ts": true,
+        "**/.git": true,
+        "**/node_modules": true,
+        "**/.vscode": true,
+        "**/dist": true,
+        "**/build": true
+        // "**/.mono": true,
+        // ".editorconfig": true,
+        // ".markdownlint.jsonc": true,
+        // "biome.jsonc": true,
+        // "bun.lock": true,
+        // "README.md": true,
+        // "tsconfig.json": true
+    },
+    "files.exclude": {
+        "**/.git": true,
+        "**/node_modules": true,
+        "**/.DS_Store": true
+        // "**/.mono": true,
+        // ".editorconfig": true,
+        // ".markdownlint.jsonc": true,
+        // "biome.jsonc": true,
+        // "bun.lock": true,
+        // "README.md": true,
+        // "tsconfig.json": true
+    },
+    "files.watcherExclude": {
+        "**/routeTree.gen.ts": true
+    },
+    "files.readonlyInclude": {
+        "**/routeTree.gen.ts": true
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[css]": {
+        "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[dockercompose]": {
+        "editor.defaultFormatter": "ms-azuretools.vscode-containers"
+    }
+}

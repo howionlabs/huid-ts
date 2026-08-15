@@ -3,7 +3,8 @@ import { EPOCH_2026_MS } from '../src/constants'
 import { HUIDError } from '../src/error'
 import { huidValidator } from '../src/validation'
 
-const makeId = (unixMs: number, random = 0n): bigint => (BigInt(unixMs - EPOCH_2026_MS) << 21n) | random
+const makeId = (unixMs: number, random = 0n): bigint =>
+    (BigInt(unixMs - EPOCH_2026_MS) << 21n) | random
 const expectHUIDError = (fn: () => unknown, code: HUIDError['name']) => {
     try {
         fn()
@@ -91,7 +92,10 @@ describe('huidValidator', () => {
     })
 
     it('throws TYPE_ERROR during validator creation for invalid option types', () => {
-        expectHUIDError(() => huidValidator({ disallowBefore: 'invalid' as unknown as Date }), 'TYPE_ERROR')
+        expectHUIDError(
+            () => huidValidator({ disallowBefore: 'invalid' as unknown as Date }),
+            'TYPE_ERROR'
+        )
         expect(() => huidValidator({ disallowAfter: 'invalid' as unknown as Date })).not.toThrow()
     })
 })

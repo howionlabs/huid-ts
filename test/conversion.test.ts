@@ -42,7 +42,10 @@ describe('buffer conversions', () => {
     it('rejects invalid buffer lengths and overflow values', () => {
         expectHUIDError(() => huidFromBuffer(Buffer.alloc(7)), 'INVALID_HUID')
         expectHUIDError(() => huidFromBuffer(Buffer.alloc(9)), 'INVALID_HUID')
-        expectHUIDError(() => huidFromBuffer(Buffer.from([0x80, 0, 0, 0, 0, 0, 0, 0])), 'INVALID_HUID')
+        expectHUIDError(
+            () => huidFromBuffer(Buffer.from([0x80, 0, 0, 0, 0, 0, 0, 0])),
+            'INVALID_HUID'
+        )
     })
 })
 
@@ -75,6 +78,9 @@ describe('byte array conversions', () => {
     it('rejects invalid array lengths and overflow values', () => {
         expectHUIDError(() => huidFromByteArray(new Uint8Array(7)), 'INVALID_HUID')
         expectHUIDError(() => huidFromByteArray(new Uint8Array(9)), 'INVALID_HUID')
-        expectHUIDError(() => huidFromByteArray(new Uint8Array([0x80, 0, 0, 0, 0, 0, 0, 0])), 'INVALID_HUID')
+        expectHUIDError(
+            () => huidFromByteArray(new Uint8Array([0x80, 0, 0, 0, 0, 0, 0, 0])),
+            'INVALID_HUID'
+        )
     })
 })

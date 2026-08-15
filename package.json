@@ -1,22 +1,22 @@
 {
     "name": "@howionlabs/huid",
-    "description": "Howion's unique identifier module for the next era",
+    "description": "The official reference implementation of Howion's Unique IDentifier in TypeScript.",
     "private": false,
     "author": {
-        "email": "howionwastaken@gmail.com",
         "name": "howion",
-        "url": "https://github.com/howion"
+        "email": "me@howion.com",
+        "url": "https://howion.com"
     },
-    "keywords": [],
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/howionlabs/huid-ts.git"
+        "url": "git+https://git.howion.com/howionlabs/huid-ts.git"
     },
     "devDependencies": {
-        "@biomejs/biome": "^2.4.9",
+        "@biomejs/biome": "2.5.8",
         "@types/bun": "latest",
         "@types/node": "latest",
-        "vitest": "^4.1.2"
+        "vitest": "^4.1.2",
+        "markdownlint": "0.41.1"
     },
     "peerDependencies": {
         "typescript": "^5"
@@ -43,11 +43,16 @@
         "README.md",
         "LICENSE"
     ],
-    "license": "MIT",
     "publishConfig": {
         "access": "public"
     },
     "sideEffects": false,
     "version": "1.0.1",
-    "type": "module"
+    "type": "module",
+    "bugs": {
+        "email": "me@howion.com",
+        "url": "https://github.com/howionlabs/huid-ts/issues"
+    },
+    "dependencies": {},
+    "license": "MIT"
 }

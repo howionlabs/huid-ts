@@ -1,0 +1,16 @@
+{
+    "recommendations": [
+        "antfu.vite",
+        "astro-build.astro-vscode",
+        "bierner.markdown-preview-github-styles",
+        "bierner.markdown-mermaid",
+        "biomejs.biome",
+        "csstools.postcss",
+        "davidanson.vscode-markdownlint",
+        "editorconfig.editorconfig",
+        "unifiedjs.vscode-mdx",
+        "typescriptteam.native-preview",
+        "vunguyentuan.vscode-postcss"
+    ],
+    "unwantedRecommendations": []
+}
